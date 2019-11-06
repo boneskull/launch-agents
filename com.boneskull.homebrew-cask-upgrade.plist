@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>com.boneskull.homebrew-cask-upgrade</string>
+	<key>LowPriorityBackgroundIO</key>
+	<true/>
+	<key>LowPriorityIO</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>-c</string>
+		<string>/usr/local/bin/brew update &amp;&amp; /usr/local/bin/brew cask upgrade &amp;&amp; /usr/local/bin/terminal-notifier -t Homebrew Cask -message 'Homebrew cask upgraded!' -timeout 10 -open file:///Users/boneskull/Library/Logs/com.boneskull.homebrew-cask-upgrade.log -group com.boneskull.homebrew-cask-upgrade -appIcon https://cldup.com/1gFdoLk6Rg.png -contentImage https://cldup.com/YVZi9Cuvhv.png</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardErrorPath</key>
+	<string>/Users/boneskull/Library/Logs/com.boneskull.homebrew-upgrade.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/boneskull/Library/Logs/com.boneskull.homebrew-upgrade.log</string>
+	<key>StartInterval</key>
+	<integer>86400</integer>
+</dict>
+</plist>
